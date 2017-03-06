@@ -1,12 +1,17 @@
 set nu
 syntax on
-set autoindent
-set tabstop=4
+set autoindent        " set auto indent;
+set tabstop=4         " tab occupies space number;
 set shiftwidth=4
 set backspace=2
-set paste
+set paste             " enable for <cmd+v> to paste;
 set encoding=utf-8
-set laststatus=2
+set laststatus=2      " show status line always;
+set showmode
+set cursorline        " display cursor line;
+set ignorecase        " ignore case when searching;
+
+filetype plugin indent on   " Automatically detect file types.
 
 " plugins begin;
 " Specify a directory for plugins (for Neovim: ~/.local/share/nvim/plugged)
@@ -15,18 +20,23 @@ call plug#begin('~/.vim/plugged')
 Plug 'junegunn/vim-easy-align'
 Plug 'fatih/vim-go'
 Plug 'nsf/gocode'
+" airline status line;
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'fugitive.vim'
+" content tree;
 Plug 'scrooloose/nerdtree'
 Plug 'easymotion'
+" table of functions;
 Plug 'tagbar'
 Plug 'scrooloose/nerdcommenter'
 Plug 'kien/ctrlp.vim'
 Plug 'kshenoy/vim-signature'
+" multiple-cursors-edit;
 Plug 'terryma/vim-multiple-cursors'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'scrooloose/syntastic'
+" autopair;
 
 
 call plug#end()
@@ -172,18 +182,18 @@ endif
 " different indent of language
 set tabstop=4 		" 文件里的 <Tab> 代表的空格数
 set shiftwidth=4 	" (自动) 缩进每一步使用的空白数目
-"set expandtab  		" <Tab> 展开为空格
+" set expandtab  		" <Tab> 展开为空格
 set softtabstop=4 	" 输入<Tab> 时, 插入的空格数
 set autoindent 		" 开启新行时，从当前行复制缩进
-if has("autocmd")
-    autocmd FileType python,ruby,css
-                \ setlocal tabstop=4 shiftwidth=4 softtabstop=4 expandtab
-
-    autocmd FileType java,javascript
-                \ setlocal tabstop=4 shiftwidth=4 softtabstop=4 cindent expandtab
-    autocmd FileType cpp,c
-                \ setlocal tabstop=4 shiftwidth=8 softtabstop=8 cindent noexpandtab
-endif
+" if has("autocmd")
+"     autocmd FileType python,ruby,css
+"                 \ setlocal tabstop=4 shiftwidth=4 softtabstop=4 expandtab
+"
+"     autocmd FileType java,javascript
+"                 \ setlocal tabstop=4 shiftwidth=4 softtabstop=4 cindent expandtab
+"     autocmd FileType cpp,c
+"                 \ setlocal tabstop=4 shiftwidth=8 softtabstop=8 cindent noexpandtab
+" endif
 
 " -- switch tab --
 map L :tabnext <CR>
