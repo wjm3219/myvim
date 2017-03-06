@@ -36,6 +36,8 @@ Plug 'kshenoy/vim-signature'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'scrooloose/syntastic'
+" git diff show;
+Plug 'airblade/vim-gitgutter'
 " autopair;
 
 
@@ -51,6 +53,12 @@ let g:airline_detect_paste=1
 let g:airline_theme='dark'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#branch#format = 0
+
+" switch among different windows;
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-h> <C-W>h
+map <C-l> <C-W>l
 
 " 快速注释 <leader>cc <leader>cu <leader>c<space>
 " Plugin 'scrooloose/nerdcommenter'
