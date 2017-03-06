@@ -5,6 +5,8 @@ set tabstop=4
 set shiftwidth=4
 set backspace=2
 set paste
+set encoding=utf-8
+set laststatus=2
 
 " plugins begin;
 " Specify a directory for plugins (for Neovim: ~/.local/share/nvim/plugged)
@@ -29,17 +31,6 @@ Plug 'scrooloose/syntastic'
 
 call plug#end()
 " plugins end;
-
-" my airline configure;
-let g:airline#extensions#tabline#enabled = 1
-let g:airline_left_sep='>'
-let g:airline_right_sep='<'
-let g:airline_detect_modified=1
-let g:airline_detect_paste=1
-let g:airline_theme='dark'
-let g:airline_powerline_fonts = 1 
-let g:airline#extensions#branch#format = 0
-
 
 " 快速注释 <leader>cc <leader>cu <leader>c<space>
 " Plugin 'scrooloose/nerdcommenter'
