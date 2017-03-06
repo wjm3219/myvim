@@ -169,19 +169,19 @@ endif
 
 " -- autocmd --
 " different indent of language
-set tabstop=8 		" 文件里的 <Tab> 代表的空格数
+set tabstop=4 		" 文件里的 <Tab> 代表的空格数
 set shiftwidth=4 	" (自动) 缩进每一步使用的空白数目
 "set expandtab  		" <Tab> 展开为空格
 set softtabstop=4 	" 输入<Tab> 时, 插入的空格数
 set autoindent 		" 开启新行时，从当前行复制缩进
 if has("autocmd")
     autocmd FileType python,ruby,css
-                \ setlocal tabstop=8 shiftwidth=4 softtabstop=4 expandtab
+                \ setlocal tabstop=4 shiftwidth=4 softtabstop=4 expandtab
 
     autocmd FileType java,javascript
-                \ setlocal tabstop=8 shiftwidth=4 softtabstop=4 cindent expandtab
+                \ setlocal tabstop=4 shiftwidth=4 softtabstop=4 cindent expandtab
     autocmd FileType cpp,c
-                \ setlocal tabstop=8 shiftwidth=8 softtabstop=8 cindent noexpandtab
+                \ setlocal tabstop=4 shiftwidth=8 softtabstop=8 cindent noexpandtab
 endif
 
 " -- switch tab --
