@@ -18,7 +18,7 @@ filetype plugin indent on   " Automatically detect file types.
 call plug#begin('~/.vim/plugged')
 
 Plug 'junegunn/vim-easy-align'
-Plug 'fatih/vim-go'
+" Plug 'fatih/vim-go'
 Plug 'nsf/gocode'
 " airline status line;
 Plug 'vim-airline/vim-airline'
